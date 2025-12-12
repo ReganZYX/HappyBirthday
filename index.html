@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💌祝余慧琴生日快乐！！！！！</title>
+<style>
+    body {
+        margin: 0;
+        background-color: #000;
+        overflow: hidden;
+        height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .popup {
+        position: absolute;
+        width: 280px;
+        padding: 16px;
+        border-radius: 20px;
+        color: #111;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+        animation: fadeIn 0.4s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    .popup:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+<body>
+
+<script>
+const messages = [
+  "🎂 生日快乐！",
+  "✨ 新的一岁，要更闪亮哦。",
+  "🌟 愿你所想皆如愿，所求皆如期。",
+  "💐 今天要好好开心！",
+  "🌈 愿好运永远陪着你走。",
+  "💛 小小的祝福，愿你日日有好心情。",
+  "🍰 来点甜的吧，新岁也甜甜的。",
+  "🌸 愿未来每一步都轻松又笃定。",
+  "🕊️ 心想事成！",
+  "🍀 愿你被温柔包围，也被幸运眷顾。",
+  "💗 生日这天，愿你被爱拥抱。",
+  "🌻 明天会更亮，今天先快乐。",
+  "🌷 愿你一切如愿，一切顺意。",
+  "💫 新岁愿望通通灵光！",
+  "🎈 愿你永远轻松自在。",
+  "🌙 今晚的月亮也在替你庆祝。",
+  "🌞 愿你光芒万丈，也愿你被温柔以待。",
+  "🦋 愿你心里装着风，日子轻盈一点。",
+  "🎁 愿每个愿望都能找到落脚点。",
+  "🔆 新的一岁，请继续闪闪发光。",
+  "❤️ 希望你的世界永远暖洋洋。",
+  "🍓 愿生活对你温柔一点，再温柔一点。",
+  "🌤️ 愿你每天都遇见小小的浪漫。",
+  "❤️ 生日快乐，愿你被生活温柔相待。",
+  "🌼 愿你走过的路，都开满花。"
+];
+
+
+const colors = [
+  "#fce4ec", "#f3e5f5", "#e8eaf6", "#e3f2fd",
+  "#e0f7fa", "#e0f2f1", "#f1f8e9", "#fffde7",
+  "#fff3e0", "#fbe9e7","#fafafa", "#f9fbe7", 
+  "#f1f8ff", "#f0f4c3", "#f8bbd0", "#ede7f6", 
+  "#fce4ec", "#f3f7f9", "#fef6e4", "#e8f5e9", 
+  "#f9f0ff", "#fff8e1", "#edf7f6", "#f5f5f5", 
+  "#fdf0ef", "#f6f0ff", "#f7faff", "#fffaf0", 
+  "#f0fff4", "#e1f5fe"
+];
+
+
+function createPopup() {
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.textContent = messages[Math.floor(Math.random() * messages.length)];
+    popup.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+    const x = Math.random() * (window.innerWidth - 300);
+    const y = Math.random() * (window.innerHeight - 150);
+    popup.style.left = `${x}px`;
+    popup.style.top = `${y}px`;
+
+    document.body.appendChild(popup);
+    setTimeout(() => popup.remove(), 5000);
+}
+
+setInterval(createPopup, 200);
+</script>
+
+</body>
+</html>
+
+
+
+
